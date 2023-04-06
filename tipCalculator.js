@@ -1,8 +1,10 @@
 //Calculator avtivity
 let billBeforeTip = 100;
+//calculates tip
 function calculateTip(amount) {
     return amount * .2;
 }
+//calculates total bill
 function getBillTotal(bill) {
     let tip = calculateTip(bill);
     let totalBill = bill + tip;
