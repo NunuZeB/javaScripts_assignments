@@ -31,7 +31,7 @@ function playRound(p1, p2) {
     p2.hand = getHand();
     //check if they are tie
     if (p1.hand === p2.hand) {
-        console.log(p1.hand + " VS " + p2.hand + " There is a tie")
+        console.log(p1.hand + " VS " + p2.hand + " There is a tie");
         return null;
     }
     //check if p1 wins
@@ -42,7 +42,7 @@ function playRound(p1, p2) {
         //displays and return the winner and increaments number of wins
     ) {
         console.log(p1.hand + " VS " + p2.hand + " " + p1.name + " is a  winnner");
-        p1.wins++
+        p1.wins++;
         return p1;
     }
     // other wise p2 wins and displays and return the winner and increaments number of wins
@@ -68,7 +68,7 @@ function playGame(p1, p2, playUntil) {
 }
 // function to play the tournament and return the winner
 function playTournament(p1, p2, p3, p4, playUntil){
-    console.log("Round one \n")
+    console.log("Round one \n");
 let firstWinner=playGame(p1, p2, playUntil);
 console.log(firstWinner.name +  " is a winner \n");
     console.log("Second round \n");
@@ -76,9 +76,10 @@ let secondWinner=playGame(p3,p4,playUntil);
 //secone winner
 console.log(secondWinner.name +  " is a winner \n");
     console.log("Finale game \n");
-let finalwinner =playGame(firstWinner, secondWinner);
+let finalwinner =playGame(firstWinner, secondWinner, playUntil);
 //anounce the champion
 console.log(finalwinner.name + " is the world champion! \n");
 
 }
+//play the tournament
 playTournament(player1, player2, player3, player4,5)
