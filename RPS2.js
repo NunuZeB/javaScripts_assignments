@@ -19,12 +19,12 @@ let player3 = {
     name: 'Player3',
     hand: getHand(),
     wins: 0
-}   
+} ;  
 let player4 = {
     name: 'Player4',
     hand: getHand(),
     wins: 0
-}
+};
 //playRound function gets hands from each player
 function playRound(p1, p2) {
     p1.hand = getHand();
