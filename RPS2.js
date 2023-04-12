@@ -11,7 +11,7 @@ let player1 = {
     wins: 0
 };
 let player2 = {
-    name: 'Player 2',
+    name: 'Player2',
     hand: getHand(),
     wins: 0
 };
@@ -39,32 +39,30 @@ function playRound(p1, p2) {
         (p1.hand === "rock" && p2.hand === "scissors") ||
         (p1.hand === "scissors" && p2.hand === "paper") ||
         (p1.hand === "paper" && p2.hand === "rock")
+    )
         //displays and return the winner and increaments number of wins
-    ) {
-        console.log(p1.hand + " VS " + p2.hand + " " + p1.name + " is a  winnner");
+         { console.log (p1.hand + " VS " +  p2.hand + " played and " + p1.name + " is a  winnner");
         p1.wins++;
         return p1;
     }
     // other wise p2 wins and displays and return the winner and increaments number of wins
-    else {
-        console.log(p1.hand + " VS " + p2.hand + " " + p2.name + " is a winner");
-        p2.wins++
+        else{
+            console.log(p1.hand + " VS " + p2.hand + " played  and " + p2.name  + " is a winner.");
+            p2.wins++;
+            return p2 ;   
+        }   
+     } 
+function playGame(p1, p2, playUntil){
+     p1.wins= 0;
+     p2.wins = 0;
+     while(p1.wins< playUntil && p2.wins < playUntil)
+        playRound(p1,p2);
+     if(p1.wins>p2.wins){
+        return p1;
+     }
+     else{
         return p2;
-    }
-}
-// playgame to play the full game and return the winner 
-function playGame(p1, p2, playUntil) {
-    p1.wins = 0;
-    p2.wins = 0;
-
-    while (p1.wins < playUntil && p2.wins < playUntil) {
-         playRound(p1, p2);
-    }
-    if (p1.wins > p2.wins) {
-        return p1
-    } else {
-        return p2;
-    }
+     }
 }
 // function to play the tournament and return the winner
 function playTournament(p1, p2, p3, p4, playUntil){
@@ -82,4 +80,4 @@ console.log(finalwinner.name + " is the world champion! \n");
 
 }
 //play the tournament
-playTournament(player1, player2, player3, player4,5)
+playTournament(player1, player2, player3, player4, 3)
