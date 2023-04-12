@@ -1,3 +1,4 @@
+//
 class Job{
    constructor(name,  industry, requiredDegree, field, requiredExperience){
         this.name = name;
@@ -6,7 +7,6 @@ class Job{
         this.field = field;
         this.requiredExperience =requiredExperience;
     }
-    
     getName(name){
 
         return this.name;
@@ -24,9 +24,9 @@ class Job{
 }
 //extended class 
 class JobTraining extends Job{
-    constructor(name,  industry, field, requiredExperience,crashCourse){
+    constructor(name,  industry, field, requiredExperience, crashCourse){
         super( name,  industry, field, requiredExperience );
-        this.JobTraining =crashCourse;    
+        this.crashCourse = crashCourse;    
     }
     getTrained(){
     console.log("Intense six month training");
@@ -43,12 +43,13 @@ let ssisDeveloper =new Job('SISI Developer','Wells Fargo','  4 years degree',' I
     console.log(ssisDeveloper.getRequiredExperience());
 
 let sqlDeveloper  =new Job('SQL Developer','Wells Fargo','4 years degree',' IT', '3 years of related work');
-    console.log(sqlDeveloper. getfieldIndustry());
+    sqlDeveloper. getfieldIndustry();
     console.log(sqlDeveloper.getRequiredExperience());
-let qualityAssurance =new Job('QA','Wells Fargo','4 years degree',' IT', '3 years of related work');
-    console.log(sqlDeveloper. getfieldIndustry());
-    console.log(sqlDeveloper.getRequiredExperience())
 
-let JobTraining1 = new JobTraining('Training','Wells Fargo','None','intense hands on trainging');
-    console.log(JobTraining1.getTrained());
-    console.log(JobTraining1.courseLocation());
+let qualityAssurance =new Job('QA','Wells Fargo','4 years degree',' IT', '3 years of related work');
+    qualityAssurance. getfieldIndustry();
+    console.log(qualityAssurance.getRequiredExperience())
+
+let JobTraining1 = new JobTraining('Training','Wells Fargo','None','IT' ,'intense hands on trainging');
+    JobTraining1.getTrained();
+    JobTraining1.courseLocation();
