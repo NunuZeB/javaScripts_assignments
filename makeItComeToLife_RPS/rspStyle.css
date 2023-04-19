@@ -7,8 +7,8 @@
 
 
 .container{
-    max-width: 420px;
-    height: 100vh;
+    max-width: 400px;
+    height: auto;
     max-height: 745px;
     margin: 0 auto;
     background-color: rgb(167, 208, 231);
@@ -19,7 +19,10 @@
     
 }
 .game-img {
-    width:20px;
+    display: block;
+    justify-content: space-between ;
+    justify-content: space-evenly;
+    width:50px;
 }
 
 h1{
@@ -28,9 +31,6 @@ h1{
   padding: 20px;  
 }
 
-#result{
-   
-}
 
 .start-text{
    
