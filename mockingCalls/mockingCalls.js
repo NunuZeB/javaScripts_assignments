@@ -1,8 +1,8 @@
 //Create an array of user objects 
 const users = [
-    { id: 1, name: 'John', email: 'john@example.com' },
-    { id: 2, name: 'Mary', email: 'mary@example.com' },
-    { id: 3, name: 'David', email: 'david@example.com' }
+    { id: 1, name: 'David', email: 'dave@example.com' },
+    { id: 2, name: 'Saba',  email: 'saba@example.com' },
+    { id: 3, name: 'Biruk', email: 'biruk@example.com' }
   ];
   //function to fetch the user with ID
   function fetchUserById(userId) {
