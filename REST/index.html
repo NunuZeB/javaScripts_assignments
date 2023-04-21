@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restStyle.css">
+    <title>Request and Reference Data</title>
+</head>
+<body>
+    <h1>Fetch API</h1>
+   <button onclick="getAllPosts()">Get All Posts</button>
+  <button onclick="getPostById()">Get Post ID 10</button>
+  <button onclick="createNewPost()">New Post</button>
+  <button onclick="replacePost()">Replace Post </button>
+  <button onclick="updatePost()">Update Post</button>
+  <button onclick="deletePost()">Delete Post</button>
+ 
+  <div class="data" id="allPosts"></div>
+  <div class="data" id="postById"></div>
+  <div class="data" id="newPost"></div>
+  <div class="data" id="replacedPost"></div>
+  <div class="data" id="updatedPost"></div>
+  <div class="data" id="deletedPost"></div>
+ 
+    <script src="restScript.js"></script>
+</body>
+</html>
+
